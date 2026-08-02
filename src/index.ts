@@ -5,3 +5,4 @@ export * from './notifications/notifier';
 export * from './payments/payment-service';
 export * from './reports/report-summary';
 export * from './users/display-name';
+export * from './users/user-labels';
