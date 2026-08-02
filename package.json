@@ -1,0 +1,17 @@
+{
+  "name": "devdigest-review-fixtures",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A small TypeScript repository used to demonstrate AI pull-request review scenarios.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.19",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}
