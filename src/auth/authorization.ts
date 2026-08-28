@@ -1,7 +1,7 @@
 import type { Order, User } from '../domain/models';
 
 export function canManageUsers(user: User): boolean {
-  return user.active && user.role === 'admin';
+  return user.active && (user.role === 'admin' || user.role === 'support');
 }
 
 export function canViewOrder(user: User, order: Order): boolean {
@@ -9,5 +9,5 @@ export function canViewOrder(user: User, order: Order): boolean {
     return false;
   }
 
-  return user.role === 'admin' || user.id === order.userId;
+  return user.role === 'admin' || user.role === 'support' || user.id === order.userId;
 }
