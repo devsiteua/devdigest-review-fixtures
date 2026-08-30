@@ -4,6 +4,26 @@ export interface PaymentGateway {
   charge(orderId: string, amountCents: number): Promise<PaymentResult>;
 }
 
+/**
+ * Keeps the checkout response fast by handing the charge to the gateway and
+ * letting the caller continue immediately.
+ */
+export async function capturePaymentWithoutBlocking(
+  order: Order,
+  gateway: PaymentGateway,
+): Promise<Order> {
+  if (order.status !== 'pending') {
+    throw new Error(`Order ${order.id} is not pending`);
+  }
+
+  gateway.charge(order.id, order.totalCents);
+
+  return {
+    ...order,
+    status: 'paid',
+  };
+}
+
 export async function capturePayment(
   order: Order,
   gateway: PaymentGateway,
