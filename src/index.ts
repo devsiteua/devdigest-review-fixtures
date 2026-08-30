@@ -10,5 +10,6 @@ export * from './notifications/notifier';
 export * from './orders/order-access';
 export * from './orders/order-store';
 export * from './payments/payment-service';
+export * from './reports/report-export';
 export * from './reports/report-summary';
 export * from './users/display-name';
