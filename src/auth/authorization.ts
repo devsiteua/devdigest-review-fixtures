@@ -11,3 +11,11 @@ export function canViewOrder(user: User, order: Order): boolean {
 
   return user.role === 'admin' || user.id === order.userId;
 }
+
+export function canDownloadInvoice(user: User, order: Order): boolean {
+  if (!user.active) {
+    return false;
+  }
+
+  return order.status === 'paid';
+}
