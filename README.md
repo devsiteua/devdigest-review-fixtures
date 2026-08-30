@@ -20,6 +20,10 @@ npm install
 npm run check
 ```
 
+## Documentation
+
+- [Metrics naming conventions](docs/metrics-naming.md)
+
 ## Important
 
 This repository is intended only for controlled code-review demonstrations. Demo branches may intentionally contain unsafe or incorrect implementations. Do not deploy or reuse code from those branches in a real system.
