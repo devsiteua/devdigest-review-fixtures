@@ -7,3 +7,4 @@ coverage/
 .DS_Store
 .idea/
 demo-meta/
+.claude/settings.local.json
