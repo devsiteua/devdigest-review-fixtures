@@ -20,6 +20,10 @@ npm install
 npm run check
 ```
 
+## Demo branches
+
+Branches under `demo/*` are opened from `main` and stay open as pull requests. Each one isolates a single review scenario, so `main` keeps its clean baseline while the demo branches accumulate the cases under review.
+
 ## Important
 
 This repository is intended only for controlled code-review demonstrations. Demo branches may intentionally contain unsafe or incorrect implementations. Do not deploy or reuse code from those branches in a real system.
